@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 class ContactCard extends StatelessWidget {
   const ContactCard({Key? key}) : super(key: key);
+
+  void _callNumber() async {
+    bool? res = await FlutterPhoneDirectCaller.callNumber('48123456');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +68,7 @@ class ContactCard extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton.icon(
-                  onPressed: () => true,
+                  onPressed: () => _callNumber(),
                   icon: const Icon(
                     Icons.call,
                     color: Colors.lightBlue,

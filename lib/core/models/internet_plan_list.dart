@@ -73,22 +73,24 @@ class InternetPlanList with ChangeNotifier {
 
     if (response.body == 'null') return;
 
-    Map<String, dynamic> data = jsonDecode(response.body);
+    try {
+      Map<String, dynamic> data = jsonDecode(response.body);
 
-    data.forEach(
-      (key, internetPlanData) {
-        if (internetPlanData != null) {
-          internetPlans.add(
-            InternetPlan(
-              name: key,
-              uploadSpeed: internetPlanData['uploadSpeed'],
-              downloadSpeed: internetPlanData['downloadSpeed'],
-              price: internetPlanData['price'],
-            ),
-          );
-        }
-      },
-    );
+      data.forEach(
+        (key, internetPlanData) {
+          if (internetPlanData != null) {
+            internetPlans.add(
+              InternetPlan(
+                name: key,
+                uploadSpeed: internetPlanData['uploadSpeed'],
+                downloadSpeed: internetPlanData['downloadSpeed'],
+                price: internetPlanData['price'],
+              ),
+            );
+          }
+        },
+      );
+    } catch (e) {}
 
     _internetPlanList = internetPlans.reversed.toList();
     notifyListeners();

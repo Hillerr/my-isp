@@ -1,16 +1,42 @@
-# my_isp
+# My ISP
 
-A new Flutter project.
+A mobile app developed for Internet Service Providers clients. 
 
-## Getting Started
+## Objective
 
-This project is a starting point for a Flutter application.
+This App gives the users the opportunity to see internet plans, see invoices, receive notifications and contact the internet company.
 
-A few resources to get you started if this is your first Flutter project:
+The idea is when the client contract the internet plan, the ISP give him an user account to login the app.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Screen Shots
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Login
+
+![Login](/images/login.png)
+
+* Homepage
+
+![Homepage](/images/home_page.png)
+
+* Other features
+
+![Invoices](/images/invoices.png)
+
+![Notifications](/images/notifications.png)
+
+![Plans](/images/plans.png)
+
+### To do
+* Profile page;
+* Speed test page;
+* Delete plan and other services page.
+
+## License
+
+MIT © Rafael Hiller
+
+## Autor
+
+Developed by Rafael Hiller.
+
+[![Linkedin Badge](https://img.shields.io/badge/-Rafael-blue?style=flat-square&logo=Linkedin&logoColor=white&link=hhttps://www.linkedin.com/in/rafael-hiller-0aa187133/)](https://www.linkedin.com/in/rafael-hiller-0aa187133/) 

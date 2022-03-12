@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactCard extends StatelessWidget {
   const ContactCard({Key? key}) : super(key: key);
@@ -47,13 +49,16 @@ class ContactCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton.icon(
-                  onPressed: () => true,
+                  onPressed: () {
+                    String url = "https://wa.me/48123456789/?text=Olá";
+                    launch(url);
+                  },
                   icon: const Icon(
-                    Icons.mail,
-                    color: Colors.lightBlue,
-                    size: 30,
+                    FontAwesomeIcons.whatsapp,
+                    color: Colors.green,
+                    size: 25,
                   ),
-                  label: Text("E-mail",
+                  label: Text("WhatsApp",
                       style: GoogleFonts.quicksand(color: Colors.lightBlue)),
                   style: ElevatedButton.styleFrom(
                     elevation: 0,

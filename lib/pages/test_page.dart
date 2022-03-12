@@ -53,6 +53,7 @@ class _TestPageState extends State<TestPage> {
                 onError: (String errorMessage, String speedTestError) {},
                 fileSize: 20000000,
               );
+
               internetSpeedTest.startUploadTesting(
                 onDone: (double transferRate, SpeedUnit unit) {
                   setState(() {

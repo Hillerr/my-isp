@@ -1,4 +1,3 @@
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:my_isp/app.dart';
 import 'package:my_isp/core/models/internet_plan_list.dart';
@@ -59,7 +58,6 @@ class MyApp extends StatelessWidget {
         routes: {
           AppRoutes.AUTH_OR_HOME: (context) => const AuthOrHome(),
           AppRoutes.AUTH: (context) => const AuthPage(),
-          AppRoutes.PDF_VIEW: (context) => const PDFInvoicePage(),
           AppRoutes.SERVICES: (context) => const PlanServicesPage(),
           AppRoutes.NOTIFICATIONS: (context) => const NotificationsPage(),
           AppRoutes.PLAN_UPGRADE: (context) => const PlanServicesPage(),

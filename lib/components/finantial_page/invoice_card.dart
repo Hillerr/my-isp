@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_isp/core/models/invoice.dart';
 import 'package:intl/intl.dart';
+import 'package:my_isp/core/services/pdf_service.dart';
+import 'package:my_isp/pages/pdf_invoice_page.dart';
 import 'package:my_isp/utils/routes.dart';
 
 class InvoiceCard extends StatelessWidget {
@@ -57,10 +59,16 @@ class InvoiceCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton.icon(
-                  onPressed: () => Navigator.of(context).pushNamed(
-                    AppRoutes.PDF_VIEW,
-                    arguments: invoice,
-                  ),
+                  onPressed: () async {
+                    const url =
+                        'https://slicedinvoices.com/pdf/wordpress-pdf-invoice-plugin-sample.pdf';
+                    final file = await PDFService.loadNetwork(url);
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => PDFInvoicePage(file: file),
+                      ),
+                    );
+                  },
                   icon: const Icon(
                     Icons.file_download,
                     color: Colors.lightBlue,

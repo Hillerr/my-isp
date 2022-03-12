@@ -1,4 +1,6 @@
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
+import 'dart:io';
+
+import 'package:flutter_pdfview/flutter_pdfview.dart';
 
 enum InvoiceStatus { payed, notPayed, expyred }
 
@@ -8,7 +10,7 @@ class Invoice {
   DateTime expiryDate;
   double value;
   InvoiceStatus status;
-  PDFDocument _doc = PDFDocument();
+  File? doc;
 
   Invoice({
     required this.id,
@@ -30,13 +32,11 @@ class Invoice {
     }
   }
 
-  PDFDocument get doc {
-    return _doc;
-  }
-
   Future<void> loadDocument() async {
-    _doc = await PDFDocument.fromURL(
-      'https://backend.intelbras.com/sites/default/files/2020-01/Datasheet-XFF1-XFF2-01.20.pdf',
+    doc = await File.fromUri(
+      Uri.parse(
+        'https://backend.intelbras.com/sites/default/files/2020-01/Datasheet-XFF1-XFF2-01.20.pdf',
+      ),
     );
   }
 }

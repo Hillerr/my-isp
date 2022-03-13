@@ -8,6 +8,13 @@ This App gives the users the opportunity to see internet plans, see invoices, re
 
 The idea is when the client contract the internet plan, the ISP give him an user account to login the app.
 
+## Usage
+
+First of all, a firebase project must be created.</br>When the firebase is setted, the ```firebase-db.json``` file shall be imported inside of Realtime Database.
+
+Check the user id must match some of the endpoints.  
+
+
 ## Screen Shots
 
 * Login

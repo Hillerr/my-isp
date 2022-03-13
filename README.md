@@ -6,7 +6,7 @@ A mobile app developed for Internet Service Providers clients.
 
 This App gives the users the opportunity to see internet plans, see invoices, receive notifications and contact the internet company.
 
-The idea is when the client contract the internet plan, the ISP give him an user account to login the app.
+The idea is when the client contract the internet plan, the ISP gives him an user account to login the app.
 
 ## Usage
 

@@ -1,0 +1,52 @@
+{
+  "contracted-plan" : {
+    "kY4EM2GCqFXM8wkJ1X7kQoAIMW72" : {
+      "contractedAt" : "15/01/2022",
+      "equipment" : "Intelbras ONT Wifiber 121 AC",
+      "equipmentImage" : "https://backend.intelbras.com/sites/default/files/styles/medium/public/2021-02/Perspectiva_esq_1_0.png",
+      "name" : "Plano 4"
+    }
+  },
+  "invoices" : {
+    "kY4EM2GCqFXM8wkJ1X7kQoAIMW72" : [ null, {
+      "expiryDate" : "05/10/2022",
+      "payingDate" : "05/10/2022",
+      "status" : 1,
+      "value" : 250
+    }, {
+      "expiryDate" : "05/09/2022",
+      "payingDate" : "05/09/2022",
+      "status" : 1,
+      "value" : 250
+    } ]
+  },
+  "notifications" : {
+    "kY4EM2GCqFXM8wkJ1X7kQoAIMW72" : [ null, {
+      "msg" : "A fatura do mês de março já está disponível!.",
+      "newMsg" : true,
+      "receivedAt" : "05/03/2022"
+    } ]
+  },
+  "plans" : {
+    "Plano 1" : {
+      "downloadSpeed" : 50,
+      "price" : 50,
+      "uploadSpeed" : 25
+    },
+    "Plano 2" : {
+      "downloadSpeed" : 100,
+      "price" : 95,
+      "uploadSpeed" : 50
+    },
+    "Plano 3" : {
+      "downloadSpeed" : 200,
+      "price" : 180,
+      "uploadSpeed" : 100
+    },
+    "Plano 4" : {
+      "downloadSpeed" : 500,
+      "price" : 250,
+      "uploadSpeed" : 250
+    }
+  }
+}
